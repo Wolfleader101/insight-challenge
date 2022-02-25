@@ -4,7 +4,9 @@ import styled from "styled-components";
 export const WeatherContainer = styled(Container)`
   background: ${(props) => props.theme.colors.background};
   border-radius: ${(props) => props.theme.borderRadius};
-  padding: 2rem;
+  width: 90%;
+  height: 100%;
+  justify-content: space-evenly;
+
   margin: 2rem;
-  justify-content: space-around;
 `;

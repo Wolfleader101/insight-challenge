@@ -9,9 +9,9 @@ export const Page = styled.div`
   @media (min-width: 1024px) {
     width: 100%;
   }
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  align-content: center;
 `;
 
 export const Container = styled.div`
