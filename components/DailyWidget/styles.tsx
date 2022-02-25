@@ -6,6 +6,10 @@ export const WidgetContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  padding: 1rem 1.5rem;
+
+  border-radius: ${(props) => props.theme.borderRadius};
   box-shadow: 15px 15px 10px -3px rgba(0, 0, 0, 0.1);
 `;
 

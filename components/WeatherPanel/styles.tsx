@@ -6,4 +6,5 @@ export const WeatherContainer = styled(Container)`
   border-radius: ${(props) => props.theme.borderRadius};
   padding: 2rem;
   margin: 2rem;
+  justify-content: space-around;
 `;
