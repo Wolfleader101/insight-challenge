@@ -1,10 +1,15 @@
+import DailyWidget from "components/DailyWidget";
 import { WeatherContainer } from "./styles";
 
 const WeatherPanel = () => {
   return (
     <>
       <WeatherContainer>
-        <div>Test</div>
+        <DailyWidget />
+        <DailyWidget />
+        <DailyWidget />
+        <DailyWidget />
+        <DailyWidget />
       </WeatherContainer>
     </>
   );
