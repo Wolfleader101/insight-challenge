@@ -1,9 +1,11 @@
-import { Page } from "components/Styled";
+import { ColContainer, Container, Page } from "components/Styled";
+import WeatherPanel from "components/WeatherPanel";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { SyntheticEvent } from "react";
+import styled from "styled-components";
 
 const Home: NextPage = () => {
   const router = useRouter();
@@ -20,7 +22,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Page>
-        <p>test</p>
+        <ColContainer>
+          <WeatherPanel />
+        </ColContainer>
       </Page>
     </div>
   );

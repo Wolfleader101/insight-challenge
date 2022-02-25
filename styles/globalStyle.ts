@@ -81,7 +81,10 @@ select {
 
 body {
     font-family: 'Open Sans', sans-serif;
+    background: ${(props) => props.theme.colors.backgroundDark};
+    color: ${(props) => props.theme.colors.accent}
 }
+
 `;
 
 export default GlobalStyle;

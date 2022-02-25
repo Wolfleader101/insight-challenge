@@ -36,7 +36,7 @@ export const ColContainer = styled.div`
 export const RowContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   align-content: center;
 `;
