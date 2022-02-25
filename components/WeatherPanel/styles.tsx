@@ -6,7 +6,7 @@ export const WeatherContainer = styled(Container)`
   border-radius: ${(props) => props.theme.borderRadius};
   width: 90%;
   height: 100%;
-  justify-content: space-evenly;
+  justify-content: center;
 
   margin: 2rem;
 `;

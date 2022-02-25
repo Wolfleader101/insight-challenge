@@ -8,6 +8,7 @@ export const WidgetContainer = styled.div`
   align-items: center;
 
   padding: 1rem 1.5rem;
+  margin: 0.5rem 0;
 
   border-radius: ${(props) => props.theme.borderRadius};
   /* box-shadow: 15px 15px 10px -3px rgba(0, 0, 0, 0.1); */
@@ -30,8 +31,9 @@ export const WidgetDate = styled.p`
 export const StyledRowBreak = styled.div`
   border-left: 1px solid ${(props) => props.theme.colors.accent};
   opacity: 30%;
-  height: 90%;
-  margin: 1rem;
+  height: 100%;
+  // hacky way to position it to the left
+  margin-left: -5rem;
 `;
 
 export const WeatherContainer = styled.div`
@@ -43,6 +45,11 @@ export const WeatherContainer = styled.div`
 
 export const SmallTemperature = styled.p`
   margin-bottom: 1rem;
+`;
+
+export const WeatherSummary = styled.p`
+  font-size: 0.8rem;
+  font-weight: 600;
 `;
 
 export const ImportantWeatherContainer = styled.div`

@@ -7,6 +7,7 @@ import {
   ImportantWeatherContainer,
   WeatherContainer,
   SmallTemperature,
+  WeatherSummary,
 } from "./styles";
 
 const DailyWidget = () => {
@@ -21,7 +22,7 @@ const DailyWidget = () => {
         <SmallTemperature>27°</SmallTemperature>
         <ImportantWeatherContainer>
           <h2>29°</h2>
-          <p>clear Sky</p>
+          <WeatherSummary>clear Sky</WeatherSummary>
         </ImportantWeatherContainer>
       </WeatherContainer>
     </WidgetContainer>
