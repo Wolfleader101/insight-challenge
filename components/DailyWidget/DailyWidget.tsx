@@ -1,4 +1,13 @@
-import { WidgetContainer, WidgetDay, WidgetDate, DateContainer } from "./styles";
+import {
+  WidgetContainer,
+  WidgetDay,
+  WidgetDate,
+  DateContainer,
+  StyledRowBreak,
+  ImportantWeatherContainer,
+  WeatherContainer,
+  SmallTemperature,
+} from "./styles";
 
 const DailyWidget = () => {
   return (
@@ -7,9 +16,14 @@ const DailyWidget = () => {
         <WidgetDay>Fri</WidgetDay>
         <WidgetDate>Feb 25th</WidgetDate>
       </DateContainer>
-      <p>27C</p>
-      <p>28C</p>
-      <p>clear Sky</p>
+      <StyledRowBreak />
+      <WeatherContainer>
+        <SmallTemperature>27°</SmallTemperature>
+        <ImportantWeatherContainer>
+          <h2>29°</h2>
+          <p>clear Sky</p>
+        </ImportantWeatherContainer>
+      </WeatherContainer>
     </WidgetContainer>
   );
 };

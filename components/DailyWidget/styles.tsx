@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const WidgetContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   padding: 1rem 1.5rem;
@@ -12,6 +12,7 @@ export const WidgetContainer = styled.div`
   border-radius: ${(props) => props.theme.borderRadius};
   /* box-shadow: 15px 15px 10px -3px rgba(0, 0, 0, 0.1); */
   box-shadow: 8px 5px 15px 5px rgba(0, 0, 0, 0.1);
+  width: 90%;
 `;
 
 export const DateContainer = styled.div`
@@ -19,9 +20,34 @@ export const DateContainer = styled.div`
   flex-direction: column;
 `;
 
-export const WidgetDay = styled.h2`
+export const WidgetDay = styled.h3`
   font-weight: bold;
 `;
 export const WidgetDate = styled.p`
   font-weight: 400;
+`;
+
+export const StyledRowBreak = styled.div`
+  border-left: 1px solid ${(props) => props.theme.colors.accent};
+  opacity: 30%;
+  height: 90%;
+  margin: 1rem;
+`;
+
+export const WeatherContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+`;
+
+export const SmallTemperature = styled.p`
+  margin-bottom: 1rem;
+`;
+
+export const ImportantWeatherContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  text-align: center;
 `;
