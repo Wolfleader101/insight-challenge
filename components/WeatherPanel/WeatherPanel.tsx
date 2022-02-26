@@ -1,16 +1,16 @@
 import DailyWidget from "components/DailyWidget";
-import { WeatherContainer } from "./styles";
+import { WeatherPanelContainer } from "./styles";
 
 const WeatherPanel = () => {
   return (
     <>
-      <WeatherContainer>
+      <WeatherPanelContainer>
         <DailyWidget />
         <DailyWidget />
         <DailyWidget />
         <DailyWidget />
         <DailyWidget />
-      </WeatherContainer>
+      </WeatherPanelContainer>
     </>
   );
 };

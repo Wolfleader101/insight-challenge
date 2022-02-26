@@ -2,7 +2,7 @@ import { ColContainer, Container, RowContainer } from "components/Styled";
 import styled from "styled-components";
 
 export const WidgetContainer = styled(RowContainer)`
-  justify-content: space-evenly;
+  justify-content: space-between;
 
   padding: 1rem 1.5rem;
   margin: 0.5rem 0;
@@ -49,8 +49,9 @@ export const StyledBreak = styled.div`
   }
 `;
 
-export const WeatherContainer = styled(RowContainer)`
-  justify-content: flex-end;
+export const WeatherContainer = styled(ColContainer)`
+  align-items: flex-end;
+  justify-content: space-evenly;
 
   @media (min-width: 481px) {
     flex-direction: column;
@@ -71,7 +72,8 @@ export const WeatherSummaryContainer = styled(ColContainer)`
 
 export const SmallTemperature = styled.p`
   @media (max-width: 480px) {
-    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
   }
 
   @media (min-width: 481px) {
