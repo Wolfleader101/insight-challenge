@@ -1,7 +1,6 @@
+import { ColContainer } from "components/Styled";
 import {
   WidgetContainer,
-  WidgetDay,
-  WidgetDate,
   DateContainer,
   StyledRowBreak,
   ImportantWeatherContainer,
@@ -14,16 +13,16 @@ const DailyWidget = () => {
   return (
     <WidgetContainer>
       <DateContainer>
-        <WidgetDay>Fri</WidgetDay>
-        <WidgetDate>Feb 25th</WidgetDate>
+        <h3>Fri</h3>
+        <p>Feb 25th</p>
       </DateContainer>
       <StyledRowBreak />
       <WeatherContainer>
         <SmallTemperature>27°</SmallTemperature>
-        <ImportantWeatherContainer>
+        <ColContainer>
           <h2>29°</h2>
           <WeatherSummary>clear Sky</WeatherSummary>
-        </ImportantWeatherContainer>
+        </ColContainer>
       </WeatherContainer>
     </WidgetContainer>
   );

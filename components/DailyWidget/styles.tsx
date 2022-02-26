@@ -1,31 +1,19 @@
-import { Container } from "components/Styled";
+import { ColContainer, Container, RowContainer } from "components/Styled";
 import styled from "styled-components";
 
-export const WidgetContainer = styled.div`
-  display: flex;
-  flex-direction: row;
+export const WidgetContainer = styled(RowContainer)`
   justify-content: space-between;
-  align-items: center;
 
   padding: 1rem 1.5rem;
   margin: 0.5rem 0;
 
   border-radius: ${(props) => props.theme.borderRadius};
-  /* box-shadow: 15px 15px 10px -3px rgba(0, 0, 0, 0.1); */
   box-shadow: 8px 5px 15px 5px rgba(0, 0, 0, 0.1);
   width: 90%;
 `;
 
-export const DateContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-export const WidgetDay = styled.h3`
-  font-weight: bold;
-`;
-export const WidgetDate = styled.p`
-  font-weight: 400;
+export const DateContainer = styled(ColContainer)`
+  align-items: flex-start;
 `;
 
 export const StyledRowBreak = styled.div`
@@ -36,11 +24,8 @@ export const StyledRowBreak = styled.div`
   margin-left: -5rem;
 `;
 
-export const WeatherContainer = styled.div`
-  display: flex;
-  flex-direction: row;
+export const WeatherContainer = styled(RowContainer)`
   justify-content: flex-end;
-  align-items: center;
 `;
 
 export const SmallTemperature = styled.p`
@@ -50,11 +35,4 @@ export const SmallTemperature = styled.p`
 export const WeatherSummary = styled.p`
   font-size: 0.8rem;
   font-weight: 600;
-`;
-
-export const ImportantWeatherContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-self: flex-end;
-  text-align: center;
 `;
