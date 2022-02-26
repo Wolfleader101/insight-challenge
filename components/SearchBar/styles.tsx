@@ -23,4 +23,8 @@ export const StyledGeoCoderInput = styled.div`
       color: ${(props) => props.theme.colors.accent};
     }
   }
+
+  .mapboxgl-ctrl-geocoder--suggestion {
+    color: ${(props) => props.theme.colors.accent};
+  }
 `;
