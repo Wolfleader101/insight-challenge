@@ -53,8 +53,19 @@ export const WeatherContainer = styled(RowContainer)`
   justify-content: flex-end;
 
   @media (min-width: 481px) {
+    flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+  }
+`;
+
+export const TemperatureContainer = styled(RowContainer)``;
+
+export const WeatherSummaryContainer = styled(ColContainer)`
+  @media (min-width: 481px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -71,12 +82,4 @@ export const SmallTemperature = styled.p`
 export const WeatherSummary = styled.p`
   font-size: 0.8rem;
   font-weight: 600;
-`;
-
-export const BigWeahterContainer = styled(ColContainer)`
-  @media (min-width: 481px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
 `;

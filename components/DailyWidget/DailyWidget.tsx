@@ -1,5 +1,14 @@
 import { ColContainer } from "components/Styled";
-import { WidgetContainer, DateContainer, StyledBreak, WeatherContainer, BigWeahterContainer, SmallTemperature, WeatherSummary } from "./styles";
+import {
+  WidgetContainer,
+  DateContainer,
+  StyledBreak,
+  WeatherContainer,
+  WeatherSummaryContainer,
+  TemperatureContainer,
+  SmallTemperature,
+  WeatherSummary,
+} from "./styles";
 
 import { BsCloudSunFill } from "react-icons/bs";
 import useWindowSize from "hooks/useWindowSize";
@@ -25,12 +34,14 @@ const DailyWidget = () => {
       </DateContainer>
       <StyledBreak />
       <WeatherContainer>
-        <SmallTemperature>27°</SmallTemperature>
-        <BigWeahterContainer>
+        <TemperatureContainer>
+          <SmallTemperature>27°</SmallTemperature>
           <h2>29°</h2>
+        </TemperatureContainer>
+        <WeatherSummaryContainer>
           {showIcon ? <BsCloudSunFill size="2rem" /> : null}
           <WeatherSummary>clear Sky</WeatherSummary>
-        </BigWeahterContainer>
+        </WeatherSummaryContainer>
       </WeatherContainer>
     </WidgetContainer>
   );
