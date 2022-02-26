@@ -43,7 +43,6 @@ export const RowContainer = styled.div`
 
 export const Heading = styled.h1`
   font-weight: 800;
-  font-size: 32px;
   text-align: center;
 `;
 
