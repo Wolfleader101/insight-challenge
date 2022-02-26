@@ -16,5 +16,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 - Iphone SE (375 x 667)
 - Iphone 12 Pro (390 x 844)
-- Ipad Air (820 x 1180)
+- Ipad Air (820 x 1180) (Rotated on its side)
 - Desktop (1920 x 1080)
