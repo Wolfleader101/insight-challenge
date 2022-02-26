@@ -8,6 +8,7 @@ import {
   TemperatureContainer,
   SmallTemperature,
   WeatherSummary,
+  BigTemperature,
 } from "./styles";
 
 import { BsCloudSunFill } from "react-icons/bs";
@@ -36,10 +37,10 @@ const DailyWidget = () => {
       <WeatherContainer>
         <TemperatureContainer>
           <SmallTemperature>27°</SmallTemperature>
-          <h2>29°</h2>
+          <BigTemperature>29°</BigTemperature>
         </TemperatureContainer>
         <WeatherSummaryContainer>
-          {showIcon ? <BsCloudSunFill size="2rem" /> : null}
+          {showIcon ? <BsCloudSunFill size="2.5rem" /> : null}
           <WeatherSummary>clear Sky</WeatherSummary>
         </WeatherSummaryContainer>
       </WeatherContainer>

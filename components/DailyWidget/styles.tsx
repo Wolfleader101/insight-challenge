@@ -55,33 +55,44 @@ export const WeatherContainer = styled(ColContainer)`
 
   @media (min-width: 481px) {
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
   }
 `;
 
-export const TemperatureContainer = styled(RowContainer)``;
+export const TemperatureContainer = styled(RowContainer)`
+  align-items: flex-end;
+`;
 
 export const WeatherSummaryContainer = styled(ColContainer)`
   @media (min-width: 481px) {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+
+    height: 100%;
+    justify-content: space-around;
   }
 `;
 
 export const SmallTemperature = styled.p`
+  font-size: 1.25rem;
   @media (max-width: 480px) {
     margin-top: 0.5rem;
     margin-right: 0.5rem;
   }
+`;
 
-  @media (min-width: 481px) {
-    margin-top: 0.75rem;
-  }
+export const BigTemperature = styled.h2`
+  font-size: 1.75rem;
+  margin-left: 0.5rem;
 `;
 
 export const WeatherSummary = styled.p`
   font-size: 0.8rem;
   font-weight: 600;
+
+  @media (min-width: 481px) {
+    font-size: 0.9rem;
+  }
 `;
