@@ -14,6 +14,7 @@ const SearchBar = () => {
     const newGeocoder = new MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
       types: "country,region,place,postcode,locality,neighborhood",
+      placeholder: "search city",
     });
 
     setGeoCoder(newGeocoder);

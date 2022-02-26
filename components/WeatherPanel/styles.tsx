@@ -25,8 +25,14 @@ export const PanelWidgetsContainer = styled(Container)`
   }
 `;
 
-export const PanelNavBar = styled(RowContainer)`
+export const PanelNavBar = styled(ColContainer)`
   width: 100%;
-  padding: 2rem 1rem;
-  justify-content: space-between;
+  padding: 2rem 3.5rem;
+
+  flex-direction: column-reverse;
+
+  @media (min-width: 481px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
