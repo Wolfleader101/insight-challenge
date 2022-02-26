@@ -13,7 +13,7 @@ export const WidgetContainer = styled(RowContainer)`
 
   @media (min-width: 481px) {
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     max-width: 15%;
     max-height: 40%;
@@ -28,7 +28,7 @@ export const DateContainer = styled(ColContainer)`
 
   @media (min-width: 481px) {
     align-items: center;
-    justify-content: flex-start;
+    padding-top: 0.5rem;
   }
 `;
 
