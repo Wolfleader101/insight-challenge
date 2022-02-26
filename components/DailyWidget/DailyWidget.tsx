@@ -1,13 +1,5 @@
 import { ColContainer } from "components/Styled";
-import {
-  WidgetContainer,
-  DateContainer,
-  StyledRowBreak,
-  ImportantWeatherContainer,
-  WeatherContainer,
-  SmallTemperature,
-  WeatherSummary,
-} from "./styles";
+import { WidgetContainer, DateContainer, StyledRowBreak, WeatherContainer, SmallTemperature, WeatherSummary } from "./styles";
 
 const DailyWidget = () => {
   return (
