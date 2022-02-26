@@ -17,6 +17,7 @@ export const StyledGeoCoderInput = styled.div`
   .mapboxgl-ctrl-geocoder--input {
     color: ${(props) => props.theme.colors.accent};
     text-align: center;
+    outline: none;
 
     &::placeholder {
       color: ${(props) => props.theme.colors.accent};
