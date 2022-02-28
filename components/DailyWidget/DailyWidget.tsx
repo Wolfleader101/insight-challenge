@@ -17,6 +17,7 @@ import { useCallback, useEffect, useState } from "react";
 import { DailyWeatherData } from "types/types";
 import { dateSuffix } from "utils";
 import { TEMPERATURE_UNIT, useTemperatureUnit } from "hooks/useTemperatureUnit";
+import WeatherIcon from "components/WeatherIcon";
 
 type Props = {
   data: DailyWeatherData;
@@ -89,8 +90,8 @@ const DailyWidget = ({ data }: Props) => {
           <BigTemperature>{maxTemp}°</BigTemperature>
         </TemperatureContainer>
         <WeatherSummaryContainer>
-          {showIcon ? <BsCloudSunFill size="2.5rem" /> : null}
-          <WeatherSummary>clear Sky</WeatherSummary>
+          {showIcon ? <WeatherIcon iconId={data.weather[0].icon} /> : null}
+          <WeatherSummary>{data.weather[0].description}</WeatherSummary>
         </WeatherSummaryContainer>
       </WeatherContainer>
     </WidgetContainer>
