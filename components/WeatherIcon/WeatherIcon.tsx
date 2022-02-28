@@ -10,10 +10,12 @@ import {
   BsSnow,
   BsFillCloudHaze2Fill,
 } from "react-icons/bs";
+import { WeatherIconType } from "types/types";
 
 type Props = {
-  iconId: string;
+  iconId: WeatherIconType;
 };
+
 const WeatherIcon = ({ iconId }: Props) => {
   switch (iconId) {
     case "01d":

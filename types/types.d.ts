@@ -1,3 +1,4 @@
+import { WeatherIcon } from "components/WeatherIcon";
 export interface GeoCoderData {
   id: string;
   type: string;
@@ -27,32 +28,35 @@ export interface DailyWeatherFeelsLike {
   morn: number;
 }
 
+export type WeatherIconType = "01d" | "02d" | "03d" | "04d" | "09d" | "10d" | "11d" | "13d" | "50d";
+
 export interface DailyWeatherInfo {
   id: number;
   main: string;
   description: string;
-  icon: string;
+  icon: WeatherIconType;
 }
 
+// set some of the values to nullable for non-important data
 export interface DailyWeatherData {
   dt: number;
-  sunrise: number;
-  sunset: number;
-  moonrise: number;
-  moonset: number;
-  moon_phase: number;
+  sunrise?: number;
+  sunset?: number;
+  moonrise?: number;
+  moonset?: number;
+  moon_phase?: number;
   temp: DailyWeatherTemp;
-  feels_like: DailyWeatherFeelsLike;
-  pressure: number;
-  humidity: number;
-  dew_point: number;
-  wind_speed: number;
-  wind_deg: number;
-  wind_gust: number;
+  feels_like?: DailyWeatherFeelsLike;
+  pressure?: number;
+  humidity?: number;
+  dew_point?: number;
+  wind_speed?: number;
+  wind_deg?: number;
+  wind_gust?: number;
   weather: DailyWeatherInfo[];
-  clouds: number;
-  pop: number;
-  uvi: number;
+  clouds?: number;
+  pop?: number;
+  uvi?: number;
 }
 
 export interface DailyWeatherResponse {

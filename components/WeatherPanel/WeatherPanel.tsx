@@ -38,7 +38,14 @@ const WeatherPanel = () => {
         </PanelNavBar>
         <PanelWidgetsContainer>
           {weatherData.map((el, i) => (
-            <DailyWidget key={i} data={el} />
+            <DailyWidget
+              key={i}
+              unixTime={el.dt}
+              tempMin={el.temp.min}
+              tempMax={el.temp.max}
+              icon={el.weather[0].icon}
+              description={el.weather[0].description}
+            />
           ))}
         </PanelWidgetsContainer>
         <PanelButtonsContainer>

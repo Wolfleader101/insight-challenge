@@ -14,15 +14,20 @@ import {
 import { BsCloudSunFill } from "react-icons/bs";
 import useWindowSize from "hooks/useWindowSize";
 import { useCallback, useEffect, useState } from "react";
-import { DailyWeatherData } from "types/types";
+import { WeatherIconType } from "types/types";
 import { dateSuffix } from "utils";
 import { TEMPERATURE_UNIT, useTemperatureUnit } from "hooks/useTemperatureUnit";
 import WeatherIcon from "components/WeatherIcon";
 
 type Props = {
-  data: DailyWeatherData;
+  // data: DailyWeatherData;
+  unixTime: number;
+  tempMin: number;
+  tempMax: number;
+  icon: WeatherIconType;
+  description: string;
 };
-const DailyWidget = ({ data }: Props) => {
+const DailyWidget = ({ unixTime, tempMin, tempMax, icon, description }: Props) => {
   const [showIcon, setShowIcon] = useState(false);
   const [day, setDay] = useState("");
   const [month, setMonth] = useState("");
@@ -43,13 +48,13 @@ const DailyWidget = ({ data }: Props) => {
 
   const calculateTemp = useCallback(() => {
     if (unit == TEMPERATURE_UNIT.CELCIUS) {
-      setMinTemp(calculateCelcius(data.temp.min).toFixed(0));
-      setMaxTemp(calculateCelcius(data.temp.max).toFixed(0));
+      setMinTemp(calculateCelcius(tempMin).toFixed(0));
+      setMaxTemp(calculateCelcius(tempMax).toFixed(0));
     } else {
-      setMinTemp(calculateFahrenheit(data.temp.min).toFixed(0));
-      setMaxTemp(calculateFahrenheit(data.temp.max).toFixed(0));
+      setMinTemp(calculateFahrenheit(tempMin).toFixed(0));
+      setMaxTemp(calculateFahrenheit(tempMax).toFixed(0));
     }
-  }, [unit, calculateCelcius, data.temp.min, data.temp.max, calculateFahrenheit]);
+  }, [unit, calculateCelcius, tempMin, tempMax, calculateFahrenheit]);
 
   useEffect(() => {
     if (width >= 481) {
@@ -61,16 +66,16 @@ const DailyWidget = ({ data }: Props) => {
 
   useEffect(() => {
     // get it as millis for js
-    const newDate = new Date(data.dt * 1000);
+    const newDate = new Date(unixTime * 1000);
 
     setDay(newDate.toLocaleString("default", { weekday: "short" }));
     setMonth(newDate.toLocaleString("default", { month: "short" }));
     setDate(newDate.toLocaleString("default", { day: "numeric" }));
-  }, [data.dt]);
+  }, [unixTime]);
 
   useEffect(() => {
     calculateTemp();
-  }, [data.temp.min, data.temp.max, calculateTemp]);
+  }, [tempMin, tempMax, calculateTemp]);
 
   return (
     <WidgetContainer>
@@ -88,8 +93,8 @@ const DailyWidget = ({ data }: Props) => {
           <BigTemperature>{maxTemp}°</BigTemperature>
         </TemperatureContainer>
         <WeatherSummaryContainer>
-          {showIcon ? <WeatherIcon iconId={data.weather[0].icon} /> : null}
-          <WeatherSummary>{data.weather[0].description}</WeatherSummary>
+          {showIcon ? <WeatherIcon iconId={icon} /> : null}
+          <WeatherSummary>{description}</WeatherSummary>
         </WeatherSummaryContainer>
       </WeatherContainer>
     </WidgetContainer>
