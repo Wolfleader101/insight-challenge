@@ -38,5 +38,9 @@ export const PanelNavBar = styled(ColContainer)`
 `;
 
 export const PanelButtonsContainer = styled(RowContainer)`
-  justify-content: space-around;
+  @media (min-width: 481px) {
+    justify-content: flex-end;
+    margin-right: 4rem;
+    width: 100%;
+  }
 `;
