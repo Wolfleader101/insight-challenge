@@ -30,9 +30,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Weather data is fetched open weather AI
 - Geocoder uses MapboxGL
 
-- Iphone SE (375 x 667)
-- Iphone 12 Pro (390 x 844)
-- Ipad Air (820 x 1180) (Rotated on its side)
+- Iphone SE Emulator(375 x 667)
+- Iphone 12 Pro Emulator (390 x 844)
+- Ipad Air Emulator(820 x 1180) (Rotated on its side)
 - Desktop (1920 x 1080)
 
 All components are also rendered out in storybook, which you can launch with `yarn storybook`

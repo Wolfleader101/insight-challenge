@@ -3,11 +3,10 @@ import styled from "styled-components";
 export const Page = styled.div`
   display: flex;
   max-width: 100vw;
-  height: 100vh;
-  max-height: 100vh;
   width: 100vw;
   @media (min-width: 1024px) {
     width: 100%;
+    height: 100vh;
   }
   justify-content: center;
   flex-direction: column;
