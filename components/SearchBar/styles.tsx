@@ -12,6 +12,7 @@ export const StyledGeoCoderInput = styled.div`
   .mapboxgl-ctrl-geocoder--icon {
     fill: ${(props) => props.theme.colors.accent};
     transform: scale(1.5);
+    margin-left: 0.5rem;
   }
 
   .mapboxgl-ctrl-geocoder--input {

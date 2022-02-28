@@ -1,9 +1,11 @@
 import DailyWidget from "components/DailyWidget";
 import SearchBar from "components/SearchBar";
 import { Heading } from "components/Styled";
+import TemperatureButton from "components/TemperatureButton";
 import { useCallback, useEffect, useState } from "react";
 import { GeoCoderData, DailyWeatherResponse, DailyWeatherData } from "types/types";
-import { PanelContainer, PanelWidgetsContainer, PanelNavBar } from "./styles";
+import { PanelContainer, PanelWidgetsContainer, PanelNavBar, PanelButtonsContainer } from "./styles";
+import { TEMPERATURE_UNIT } from "hooks/useTemperatureUnit";
 
 const WeatherPanel = () => {
   const [locationData, setLocationData] = useState<GeoCoderData>();
@@ -38,12 +40,11 @@ const WeatherPanel = () => {
           {weatherData.map((el, i) => (
             <DailyWidget key={i} data={el} />
           ))}
-          {/* <DailyWidget />
-          <DailyWidget />
-          <DailyWidget />
-          <DailyWidget />
-          <DailyWidget /> */}
         </PanelWidgetsContainer>
+        <PanelButtonsContainer>
+          <TemperatureButton tempUnit={TEMPERATURE_UNIT.CELCIUS} />
+          <TemperatureButton tempUnit={TEMPERATURE_UNIT.FAHRENHEIT} />
+        </PanelButtonsContainer>
       </PanelContainer>
     </>
   );

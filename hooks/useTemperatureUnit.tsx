@@ -1,8 +1,8 @@
 import React, { useState, useContext, createContext } from "react";
 
 export enum TEMPERATURE_UNIT {
-  CELCIUS,
-  FAHRENHEIT,
+  CELCIUS = 0,
+  FAHRENHEIT = 1,
 }
 
 export type TemperatureUnitContextType = {

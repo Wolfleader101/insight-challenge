@@ -36,3 +36,7 @@ export const PanelNavBar = styled(ColContainer)`
     justify-content: space-between;
   }
 `;
+
+export const PanelButtonsContainer = styled(RowContainer)`
+  justify-content: space-around;
+`;

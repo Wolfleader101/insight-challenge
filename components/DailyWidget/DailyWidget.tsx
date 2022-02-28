@@ -49,8 +49,6 @@ const DailyWidget = ({ data }: Props) => {
       setMinTemp(calculateFahrenheit(data.temp.min).toFixed(0));
       setMaxTemp(calculateFahrenheit(data.temp.max).toFixed(0));
     }
-    console.log(data.temp.min);
-    console.log(calculateFahrenheit(data.temp.min));
   }, [unit, calculateCelcius, data.temp.min, data.temp.max, calculateFahrenheit]);
 
   useEffect(() => {
