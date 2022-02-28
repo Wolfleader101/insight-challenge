@@ -16,8 +16,8 @@ export const WidgetContainer = styled(RowContainer)`
     justify-content: flex-start;
     align-items: center;
     max-width: 15%;
-    max-height: 50%;
-    height: 50%;
+    max-height: 65%;
+    height: 100%;
     padding: 0;
     margin: 0;
   }

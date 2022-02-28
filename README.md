@@ -12,6 +12,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 # ASSUMPTIONS
 
+- 5 Day forecase starts from the current day
 - Tested on the following devices
 
 - Iphone SE (375 x 667)
