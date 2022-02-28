@@ -20,7 +20,6 @@ import { TEMPERATURE_UNIT, useTemperatureUnit } from "hooks/useTemperatureUnit";
 import WeatherIcon from "components/WeatherIcon";
 
 type Props = {
-  // data: DailyWeatherData;
   unixTime: number;
   tempMin: number;
   tempMax: number;
