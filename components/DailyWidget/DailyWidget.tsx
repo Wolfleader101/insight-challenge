@@ -14,8 +14,12 @@ import {
 import { BsCloudSunFill } from "react-icons/bs";
 import useWindowSize from "hooks/useWindowSize";
 import { useEffect, useState } from "react";
+import { DailyWeatherData } from "types/types";
 
-const DailyWidget = () => {
+type Props = {
+  data: DailyWeatherData;
+};
+const DailyWidget = ({ data }: Props) => {
   const [showIcon, setShowIcon] = useState(false);
   const { width } = useWindowSize();
 

@@ -5,7 +5,10 @@ import { useEffect, useState, useRef } from "react";
 import { StyledGeoCoderInput } from "./styles";
 import { GeoCoderEvent } from "types/types";
 
-const SearchBar = () => {
+type Props = {
+  setLocation: (value: React.SetStateAction<any>) => void;
+};
+const SearchBar = ({ setLocation }: Props) => {
   mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX ?? "";
   const [geocoder, setGeoCoder] = useState<MapboxGeocoder>();
   const geocoderRef = useRef<HTMLDivElement>(null);
@@ -18,7 +21,17 @@ const SearchBar = () => {
     });
 
     setGeoCoder(newGeocoder);
-  }, []);
+
+    // DEFAULT LOCATION SET TO PERTH
+    setLocation({
+      id: "place.3737670470566420",
+      type: "Feature",
+      text: "Perth",
+      language: "en",
+      place_name: "Perth, Western Australia, Australia",
+      center: [115.8605, -31.9527],
+    });
+  }, [setLocation]);
 
   useEffect(() => {
     if (geocoderRef == null) return;
@@ -26,11 +39,11 @@ const SearchBar = () => {
     geocoder?.addTo(geocoderRef.current ?? "");
 
     const ResultListener = (event: GeoCoderEvent) => {
-      console.log(event.result.center);
+      setLocation(event.result);
     };
 
     const ClearListener = (event: GeoCoderEvent) => {
-      // clear state
+      setLocation(null);
     };
 
     geocoder?.on("result", ResultListener);
@@ -40,7 +53,7 @@ const SearchBar = () => {
       geocoder?.off("result", ResultListener);
       geocoder?.off("clear", ClearListener);
     };
-  }, [geocoder, geocoderRef]);
+  }, [geocoder, geocoderRef, setLocation]);
 
   return (
     <div>
