@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <TemperatureUnitProvider>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Component {...pageProps} />)
+        <Component {...pageProps} />
       </ThemeProvider>
     </TemperatureUnitProvider>
   );
